@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Practical Exam</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+    <div class="main-container">
+        <div class="todo-card">
+            <div class="card-body p-4">
+                <!-- Header -->
+                <div class="todo-header">
+                    <h1 class="todo-title text-center">Task Manager</h1>
+                    <p class="todo-subtitle text-center">Stay organized, stay productive</p>
+                </div>
+
+                <!-- Input Form -->
+                <div class="mb-4">
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="What needs to be done?" id="todoInput">
+                        <button class="btn btn-add px-4 btn-primary" type="button" id="addBtn" onclick="addTask()">
+                            <i class="fas fa-plus"></i>
+                        </button>
+                    </div>
+                    <select class="form-select" id="prioritySelect">
+                        <option value="-1">Select Priority</option>
+                        <option value="1">High Priority</option>
+                        <option value="2">Medium Priority</option>
+                        <option value="3">Low Priority</option>
+                    </select>
+                    <select class="form-select my-3" id="sort">
+                        <option value="-1">Sort by priority</option>
+                        <option value="1">High Priority</option>
+                        <option value="2">Low Priority</option>
+                    </select>
+                </div>
+
+                <!-- Todo List -->
+                <div id="todoList">
+                    <div class="empty-state">
+                        <p>No tasks yet. Add one above!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+    <script src="./assets/js/script.js"></script>
+
+</body>
+</html>
